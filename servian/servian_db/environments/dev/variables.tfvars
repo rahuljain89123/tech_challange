@@ -1,0 +1,5 @@
+aws_region="us-east-1"
+deployment_stage="dev"
+vpc_cidr_block="10.10.0.0/16"
+public_subnet_cidr_block="10.10.0.0/24"
+private_subnet_cidr_block="10.10.10.0/24"
