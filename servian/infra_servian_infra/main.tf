@@ -79,5 +79,22 @@ module "ecs" {
   servian_GENERAL_SERVICE_NAME = var.SERVICE_NAME
 }
 
+module "alb" {
+  source = "./alb"
+  
+  deployment_stage = var.deployment_stage
+  alb_subnets = "${var.subnet}"
+  alb_type = "${var.internal}"
+  lb_port = "${var.lb_port}"
+  lb_protocol = "${var.lb_protocol}"
+  instance_port "${var.instance_port}"
+  instance_portocol = "${var.instance_portocol}"
+  security_groups = "${var.security_groups}"
+  threshold = "${var.threshold}"
+  unhealthy = "${var.unhealthy}"
+  timeout = "${var.timeout}"
+  interval = "${var.interval}"
+ }
+
 
 
